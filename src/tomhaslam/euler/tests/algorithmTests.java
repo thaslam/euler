@@ -8,6 +8,24 @@ import tomhaslam.euler.code.*;
 public class algorithmTests {
 	
 	@Test
+	public void the6thPrimeNumberShouldBe13()
+	{
+		Algorithms algs = new Algorithms();
+		long result = algs.findNthPrimeNumber(6);
+		
+		assertTrue("Result is 13", result == 13);
+		System.out.printf("The 6th prime number is %d \n", result);
+	}
+	@Test
+	public void whatIsThe10001thPrimeNumber()
+	{
+		Algorithms algs = new Algorithms();
+		long result = algs.findNthPrimeNumber(10001);
+		
+		assertTrue("Result is 10001", result != 0);
+		System.out.printf("The 10001th prime number is %d \n", result);
+	}
+	@Test
 	public void whatIsDifferenceBetweenSumOfSquaresAndSquareOfSum()
 	{
 		Algorithms algs = new Algorithms();
