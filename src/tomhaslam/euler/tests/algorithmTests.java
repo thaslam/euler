@@ -8,6 +8,24 @@ import tomhaslam.euler.code.*;
 public class algorithmTests {
 	
 	@Test
+	public void greatestFourDigitProductIs5832()
+	{
+		Algorithms algs = new Algorithms();
+		long result = algs.findGreatestAdjacentProductOfNSize(4);
+		
+		assertTrue("Result is 5832", result == 5832);
+		System.out.printf("The greatest four adjacent numbers product is %d \n", result);
+	}
+	@Test
+	public void whatIsGreatThirteenDigitProduct()
+	{
+		Algorithms algs = new Algorithms();
+		long result = algs.findGreatestAdjacentProductOfNSize(13);
+		
+		assertTrue("Result is not 0", result != 0);
+		System.out.printf("The greatest thirteen adjacent numbers product is %d \n", result);
+	}
+	@Test
 	public void the6thPrimeNumberShouldBe13()
 	{
 		Algorithms algs = new Algorithms();
@@ -16,6 +34,7 @@ public class algorithmTests {
 		assertTrue("Result is 13", result == 13);
 		System.out.printf("The 6th prime number is %d \n", result);
 	}
+	
 	@Test
 	public void whatIsThe10001thPrimeNumber()
 	{
@@ -25,6 +44,7 @@ public class algorithmTests {
 		assertTrue("Result is 10001", result != 0);
 		System.out.printf("The 10001th prime number is %d \n", result);
 	}
+	
 	@Test
 	public void whatIsDifferenceBetweenSumOfSquaresAndSquareOfSum()
 	{
@@ -34,6 +54,7 @@ public class algorithmTests {
 		assertTrue("Result is 2640", result == 2640);
 		System.out.printf("Difference between SumOfSquares and SquareOfSums for first 10 numbers is %d \n", result);
 	}
+	
 	@Test
 	public void whatIsDifferenceBetweenSumOfSquaresAndSquareOfSumFirst100()
 	{
@@ -52,6 +73,7 @@ public class algorithmTests {
 		assertTrue("Result is not -1", result > -1);
 		System.out.printf("Smallest multiple between 1 and 10 is %d \n", result);
 	}
+	
 	@Test
 	public void whatIsSmallestMultipleOf1to20() 
 	{
@@ -61,6 +83,7 @@ public class algorithmTests {
 		assertTrue("Result is not -1", result > -1);
 		System.out.printf("Smallest multiple between 1 and 20 is %d \n", result);
 	}
+	
 	@Test
 	public void whatIsThreeDigitPalindrome() 
 	{
