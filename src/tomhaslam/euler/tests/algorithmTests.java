@@ -8,6 +8,14 @@ import tomhaslam.euler.code.*;
 public class algorithmTests {
 	
 	@Test
+	public void productPathagoreanTripleOf1000()
+	{
+		Algorithms algs = new Algorithms();
+		long result = algs.finePathagoreanTripletProduct(1000);
+		
+		System.out.printf("The product of triples is %d \n", result);
+	}
+	@Test
 	public void greatestFourDigitProductIs5832()
 	{
 		Algorithms algs = new Algorithms();
