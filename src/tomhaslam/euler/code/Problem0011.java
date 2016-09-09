@@ -9,7 +9,7 @@ public class Problem0011 extends Problem {
 	
 	What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
 	*/
-	public long solve()
+	public long solve(int size)
 	{
 		int[][] grid = new int[][] {
 			{ 8,  2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91,  8 },
@@ -34,7 +34,87 @@ public class Problem0011 extends Problem {
 			{ 01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48 }
 		};
 		
-		return -1;
+		long maxProduct = 1;
+
+		for (int i=0; i<grid.length; i++)
+		{
+			for (int j=0; j<grid[i].length; j++)
+			{
+				long product = 1;
+				for (int d=0; d<size; d++)
+				{
+					// test that we have room for adjacent down
+					if((grid.length-(i+1)) < size) break;
+					product *= grid[i+d][j];
+				}
+				if (product > maxProduct) maxProduct = product;
+				
+				product = 1;
+				for (int u=0; u<size; u++)
+				{
+					// test that we have room for adjacent up
+					if(i<(size-1)) break;
+					product *= grid[i-u][j];
+				}
+				if (product > maxProduct) maxProduct = product;
+				
+				product = 1;
+				for (int l=0; l<size; l++)
+				{
+					// test that we have room for adjacent left
+					if(j<(size-1)) break;
+					product *= grid[i][j-l];
+				}
+				if (product > maxProduct) maxProduct = product;
+				
+				product = 1;
+				for (int r=0; r<size; r++)
+				{
+					// test that we have room for adjacent right
+					if((grid[i].length-(j+1)) < size) break;
+					product *= grid[i][j+r];
+				}
+				if (product > maxProduct) maxProduct = product;
+				
+				product = 1;
+				for (int x=0; x<size; x++)
+				{
+					// test that we have room for adjacent diag right
+					if((grid.length-(i+1)) < size || (grid[i].length-(j+1)) < size) break;
+					product *= grid[i+x][j+x];
+				}
+				if (product > maxProduct) maxProduct = product;
+				
+				product = 1;
+				for (int xl=0; xl<size; xl++)
+				{
+					// test that we have room for adjacent diag left
+					if((grid.length-(i+1)) < size || j<(size-1)) break;
+					product *= grid[i+xl][j-xl];
+				}
+				if (product > maxProduct) maxProduct = product;
+				
+				product = 1;
+				for (int xur=0; xur<size; xur++)
+				{
+					// test that we have room for adjacent diag up right
+					if(i<(size-1) || (grid[i].length-(j+1)) < size) break;
+					product *= grid[i-xur][j+xur];
+				}
+				if (product > maxProduct) maxProduct = product;
+				
+				product = 1;
+				for (int xul=0; xul<size; xul++)
+				{
+					// test that we have room for adjacent diag up left
+					if(i<(size-1) || j<(size-1)) break;
+					product *= grid[i-xul][j-xul];
+				}
+				if (product > maxProduct) maxProduct = product;
+			}
+		}
+		
+		return maxProduct;
 	}
 	
 }

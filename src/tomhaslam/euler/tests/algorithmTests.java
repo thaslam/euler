@@ -5,8 +5,16 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import tomhaslam.euler.code.*;
 
-public class algorithmTests {
-	
+public class algorithmTests 
+{	
+	@Test
+	public void maxDirectionalProductInGrid()
+	{
+		Problem problem = new Problem0011();
+		long result = problem.solve(4);
+		
+		System.out.printf("The greatest product in the grid is %d \n", result);
+	}
 	@Test
 	public void productPathagoreanTripleOf1000()
 	{
