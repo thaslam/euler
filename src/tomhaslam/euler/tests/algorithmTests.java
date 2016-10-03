@@ -8,6 +8,15 @@ import tomhaslam.euler.code.*;
 public class algorithmTests 
 {	
 	@Test
+	public void findPathsToBottom()
+	{
+		Problem problem = new Problem0015();
+		long result = problem.solve(3);
+		
+		assertTrue("Total count should be 20.", result != 20);
+		System.out.printf("The traversels is %d \n", result);
+	}
+	@Test
 	public void maxDirectionalProductInGrid()
 	{
 		Problem problem = new Problem0011();
