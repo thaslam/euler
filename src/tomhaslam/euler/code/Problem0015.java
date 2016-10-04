@@ -22,7 +22,4 @@ public class Problem0015 extends Problem {
 		
 		return _count;
 	}
-	
-	
-	
 }
