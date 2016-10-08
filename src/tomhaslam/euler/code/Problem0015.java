@@ -12,7 +12,7 @@ public class Problem0015 extends Problem {
 	{		
 		if (col==size) {
 			_count += (paths);
-			return _count;
+			return _count;   
 		}
 		
 		for (int p=0; p<paths; p++)

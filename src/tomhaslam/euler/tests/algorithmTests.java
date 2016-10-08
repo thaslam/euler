@@ -1,4 +1,6 @@
 package tomhaslam.euler.tests;
+import java.util.List;
+import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
@@ -8,13 +10,34 @@ import tomhaslam.euler.code.*;
 public class algorithmTests 
 {	
 	@Test
-	public void findSumOfNumbersInProduct()
+	public void twoToThePowerOf15Equals32768()
+	{
+		Problem0016 problem = new Problem0016();
+		List<Character> result = problem.twoToThePowerOf(Arrays.asList('2'), 15, 1);
+		
+		char[] checkChars = new char[] {'3','2','7','6','8'};
+		
+		for (int i=0; i<result.size(); i++)
+		{
+			assertTrue("Character is valid.", result.get(i) == checkChars[i]);
+		}
+	}
+	@Test
+	public void findSumOfNumbersInPowerOf1000()
 	{
 		Problem problem = new Problem0016();
 		long result = problem.solve(1000);
 		
+		System.out.printf("Sum of individual numbers when 2 to power of 1000 is %d \n", result);
+	}
+	@Test
+	public void findSumOfNumbersInPowerOf15()
+	{
+		Problem problem = new Problem0016();
+		long result = problem.solve(15);
+		
 		//assertTrue("Sum of individual numbers is 26.", result == 26);
-		System.out.printf("Sum of individual numbers is %d \n", result);
+		System.out.printf("Sum of individual numbers when 2 to power of 15 is %d \n", result);
 	}
 	@Test
 	public void findPathsToBottom()
@@ -165,3 +188,4 @@ public class algorithmTests
 	}
 
 }
+
