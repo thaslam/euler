@@ -4,165 +4,159 @@ import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import tomhaslam.euler.code.*;
 
 public class algorithmTests 
 {	
 	@Test
-	public void twoToThePowerOf15Equals32768()
+	public void problem0018()
 	{
-		Problem0016 problem = new Problem0016();
-		List<Character> result = problem.twoToThePowerOf(Arrays.asList('2'), 15, 1);
+		Problem problem = new Problem0018();
+		long result = problem.solve();
 		
-		char[] checkChars = new char[] {'3','2','7','6','8'};
-		
-		for (int i=0; i<result.size(); i++)
-		{
-			assertTrue("Character is valid.", result.get(i) == checkChars[i]);
-		}
+		System.out.printf("Problem 0018 answer is %d \n", result);
 	}
-	@Test
-	public void findSumOfNumbersInPowerOf1000()
+	@Ignore @Test
+	public void problem0016()
 	{
 		Problem problem = new Problem0016();
 		long result = problem.solve(1000);
 		
-		System.out.printf("Sum of individual numbers when 2 to power of 1000 is %d \n", result);
+		System.out.printf("Problem 0016 answer is %d \n", result);
 	}
 	@Test
-	public void findSumOfNumbersInPowerOf15()
+	public void problem0016Proof()
 	{
 		Problem problem = new Problem0016();
 		long result = problem.solve(15);
 		
-		//assertTrue("Sum of individual numbers is 26.", result == 26);
-		System.out.printf("Sum of individual numbers when 2 to power of 15 is %d \n", result);
+		assertTrue("Sum of individual numbers is 26.", result == 26);
+		System.out.printf("Problem 0016 proof is %d \n", result);
 	}
 	@Test
-	public void findPathsToBottom()
+	public void problem0015()
 	{
 		Problem problem = new Problem0015();
 		long result = problem.solve(3);
 		
 		assertTrue("Total count should be 20.", result == 20);
-		System.out.printf("The traversels is %d \n", result);
+		System.out.printf("Problem 0015 answer is %d \n", result);
 	}
 	@Test
-	public void maxDirectionalProductInGrid()
+	public void problem0011()
 	{
 		Problem problem = new Problem0011();
 		long result = problem.solve(4);
 		
-		System.out.printf("The greatest product in the grid is %d \n", result);
+		System.out.printf("Problem 0011 answer is %d \n", result);
 	}
 	@Test
-	public void productPathagoreanTripleOf1000()
+	public void problem0009()
 	{
 		Problem problem = new Problem0009();
 		long result = problem.solve(1000);
 		
-		System.out.printf("The product of triples is %d \n", result);
+		System.out.printf("Problem 0009 answer is %d \n", result);
 	}
 	@Test
-	public void greatestFourDigitProductIs5832()
+	public void problem0008Proof()
 	{
 		Problem problem = new Problem0008();
 		long result = problem.solve(4);
 		
 		assertTrue("Result is 5832", result == 5832);
-		System.out.printf("The greatest four adjacent numbers product is %d \n", result);
+		System.out.printf("Problem 0008 proof is %d \n", result);
 	}
 	@Test
-	public void whatIsGreatThirteenDigitProduct()
+	public void problem0008()
 	{
 		Problem problem = new Problem0008();
 		long result = problem.solve(13);
 		
 		assertTrue("Result is not 0", result != 0);
-		System.out.printf("The greatest thirteen adjacent numbers product is %d \n", result);
+		System.out.printf("Problem 0008 answer is %d \n", result);
 	}
 	@Test
-	public void the6thPrimeNumberShouldBe13()
+	public void problem0007Proof()
 	{
 		Problem problem = new Problem0007();
 		long result = problem.solve(6);
 		
 		assertTrue("Result is 13", result == 13);
-		System.out.printf("The 6th prime number is %d \n", result);
+		System.out.printf("Problem 0007 proof is %d \n", result);
 	}
 	
 	@Test
-	public void whatIsThe10001thPrimeNumber()
+	public void problem0007()
 	{
 		Problem problem = new Problem0007();
 		long result = problem.solve(10001);
 		
 		assertTrue("Result is 10001", result != 0);
-		System.out.printf("The 10001th prime number is %d \n", result);
+		System.out.printf("Problem 0007 answer is %d \n", result);
 	}
 	
 	@Test
-	public void whatIsDifferenceBetweenSumOfSquaresAndSquareOfSum()
+	public void problem0006Proof()
 	{
 		Problem problem = new Problem0006();
 		long result = problem.solve(10);
 		
 		assertTrue("Result is 2640", result == 2640);
-		System.out.printf("Difference between SumOfSquares and SquareOfSums for first 10 numbers is %d \n", result);
+		System.out.printf("Problem 0006 proof is %d \n", result);
 	}
-	
 	@Test
-	public void whatIsDifferenceBetweenSumOfSquaresAndSquareOfSumFirst100()
+	public void problem0006()
 	{
 		Problem problem = new Problem0006();
 		long result = problem.solve(100);
 		
-		//assertTrue("Result is 2640", result == 2640);
-		System.out.printf("Difference between SumOfSquares and SquareOfSums for first 100 numbers is %d \n", result);
+		System.out.printf("Problem 0006 answer is %d \n", result);
 	}
 	@Test
-	public void whatIsSmallestMultipleOf1to10() 
+	public void problem0005Proof() 
 	{
 		Problem problem = new Problem0005();
 		long result = problem.solve(1, 10);
 		
 		assertTrue("Result is not -1", result > -1);
-		System.out.printf("Smallest multiple between 1 and 10 is %d \n", result);
+		System.out.printf("Problem 0005 proof is %d \n", result);
 	}
 	
 	@Test
-	public void whatIsSmallestMultipleOf1to20() 
+	public void problem0005() 
 	{
 		Problem problem = new Problem0005();
 		long result = problem.solve(1, 20);
 		
 		assertTrue("Result is not -1", result > -1);
-		System.out.printf("Smallest multiple between 1 and 20 is %d \n", result);
+		System.out.printf("Problem 0006 answer is %d \n", result);
 	}
 	
 	@Test
-	public void whatIsThreeDigitPalindrome() 
+	public void problem0004() 
 	{
 		Problem problem = new Problem0004();
 		long result = problem.solve(100,999);
 		
 		assertTrue("Result is not -1", result > -1);
-		System.out.printf("Largest palindrome product of three digits is %d \n", result);
+		System.out.printf("Problem 0004 answer is %d \n", result);
 	}
 	
 	@Test
-	public void whatIsTwoDigitPalindrome() 
+	public void problem0004Proof() 
 	{
 		Problem problem = new Problem0004();
 		long result = problem.solve(10,99);
 		
 		assertTrue("Result is not -1", result > -1);
-		System.out.printf("Largest palindrome product of two digits is %d \n", result);
+		System.out.printf("Problem 0004 proof is %d \n", result);
 	}
 	
 	@Test
-	public void isNotPalindrome() 
+	public void baseProblemIsNotPalindrome() 
 	{
 		Problem problem = new Problem0001();
 		boolean result = problem.isPalindrome(9833);
@@ -175,7 +169,7 @@ public class algorithmTests
 	}
 	
 	@Test
-	public void isPalindrome() 
+	public void baseProblemIsPalindrome() 
 	{
 		Problem problem = new Problem0001();
 		boolean result = problem.isPalindrome(9889);
