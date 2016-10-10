@@ -11,6 +11,14 @@ import tomhaslam.euler.code.*;
 public class algorithmTests 
 {	
 	@Test
+	public void problem0067()
+	{
+		Problem problem = new Problem0067();
+		long result = problem.solve();
+		
+		System.out.printf("Problem 0067 answer is %d \n", result);
+	}
+	@Test
 	public void problem0018()
 	{
 		Problem problem = new Problem0018();

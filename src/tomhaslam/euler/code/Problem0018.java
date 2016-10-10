@@ -34,8 +34,8 @@ public class Problem0018 extends Problem {
 		
 		return traversePreviousRow(triangle, 105, 119);
 	}
-	private HashMap<Integer, Integer> longestPath = new HashMap<Integer, Integer>();
 	
+	private HashMap<Integer, Integer> longestPath = new HashMap<Integer, Integer>();
 	public int traversePreviousRow(int[] source, int start, int end) 
 	{		
 		for (int i=start; i<=end; i++) 
