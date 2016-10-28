@@ -1,7 +1,6 @@
 package tomhaslam.euler.code;
 
 public abstract class Problem {
-	
 	public long solve() 
 	{
 		throw new UnsupportedOperationException();
@@ -11,6 +10,10 @@ public abstract class Problem {
 		throw new UnsupportedOperationException();
 	}
 	public long solve(long value)
+	{
+		throw new UnsupportedOperationException();
+	}
+	public long solve(StringBuffer refAnswer) 
 	{
 		throw new UnsupportedOperationException();
 	}

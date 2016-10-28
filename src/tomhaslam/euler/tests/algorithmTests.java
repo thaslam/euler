@@ -11,6 +11,15 @@ import tomhaslam.euler.code.*;
 public class algorithmTests 
 {	
 	@Test
+	public void problem0024()
+	{
+		Problem problem = new Problem0024();
+		StringBuffer answer = new StringBuffer();
+		problem.solve(answer);
+		
+		System.out.printf("Problem 0024 answer is %s \n", answer.toString());
+	}
+	@Test
 	public void problem0067()
 	{
 		Problem problem = new Problem0067();
